@@ -3,24 +3,51 @@
   <head>
     <meta http-equiv="Content-Language" content="en-za" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="./styling.css" />
+    <link rel="stylesheet" href="./css/styling.css" />
 
     <title>ORDER</title>
   </head>
 
   <body>
     <div id="page">
+      <div id="sidebar">
+        <img src="images/swegga.jpg" id="sidebar-image" />
+      </div>
       <div id="banner">
-        <img src="images/delivery.gif" alt="" />
+        <img src="images/delivery.gif" id="banner-image" />
       </div>
       <div id="navigation">
-        <img src="images/links.gif" alt="" />
-      </div>
-      <div id="sidebar">
-        <img src="images/swegga.jpg" alt="" />
+        <img src="./images/links.gif" id="nav-image" />
+        <map name="nav-map">
+          <area shape="rect" coords="10,5,95,35" href="order.html" alt="Home" />
+          <area
+            shape="rect"
+            coords="105,5,190,35"
+            href="services.html"
+            alt="Services"
+          />
+          <area
+            shape="rect"
+            coords="205,5,300,35"
+            href="products.html"
+            alt="Products"
+          />
+          <area
+            shape="rect"
+            coords="310,5,440,35"
+            href="orderStatus.html"
+            alt="Order Status"
+          />
+          <area
+            shape="rect"
+            coords="450,5,555,35"
+            href="contactUs.html"
+            alt="Contact Us"
+          />
+        </map>
       </div>
       <div id="main">
-        <form action="orders">
+        <form>
           <table>
             <caption>
               Product summary
@@ -29,7 +56,7 @@
               <th>Description</th>
               <th>Size</th>
               <th>Color</th>
-              <th>Price</th>
+              <th id="price">Price</th>
               <th>Quantity</th>
               <th>Total</th>
             </thead>
@@ -52,8 +79,9 @@
                     <option value="black">Black</option>
                   </select>
                 </td>
-                <td>150.95</td>
-                <td><input type="text" /></td>
+                <td femalePrice>150.95</td>
+                <td><input type="text" femaleqty required /></td>
+                <td femaleOutput></td>
               </tr>
               <tr>
                 <td>
@@ -73,33 +101,34 @@
                     <option value="white">White</option>
                   </select>
                 </td>
-                <td>180.95</td>
-                <td><input type="text" /></td>
+                <td malePrice>180.95</td>
+                <td><input type="text" maleqty required /></td>
+                <td maleOutput></td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="4">Click to confirm and process your order</td>
+                <td colspan="4">
+					Click to confirm and process your order
+				</td>
                 <td>
                   <input
                     type="button"
-                    name="confirm"
+                    confirm
                     id="confirm"
                     value="Total price"
                   />
                 </td>
+                <td id="totalBtn"></td>
               </tr>
             </tfoot>
           </table>
         </form>
       </div>
       <div id="footer">
-		<p class="copyright">
-			&copy;  2020 Swegga Fashion -Mbalentle & Diko
-
-		</p>
-	  </div>
+        <p class="copyright">&copy; 2020 Swegga Fashion -Mbalentle Diko</p>
+      </div>
     </div>
-	<script src="./script/code.js"></script>
+    <script src="./script/code.js"></script>
   </body>
 </html>
